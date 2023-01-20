@@ -9,7 +9,7 @@ const cors = require('cors');
 app.use(express.json());
 
 app.get('/',(req,res)=>{
-    res.json({"message": "API Listening"});
+    res.status(200).json({"message": "API Listening"});
 });
 
 app.get('/api/movies',(req,res)=>{
