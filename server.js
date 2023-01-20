@@ -34,7 +34,7 @@ app.get('/api/movies/:id',(req,res)=>{
 
 app.put('/api/movies/:id',(req,res)=>{
     db.updateMovieById(req.body, req.params.id).then((data)=>{
-        res.status(200).json(data);
+        res.status(201).json(data);
     }).catch((err)=>{
         res.status(500).send(err);
     });
@@ -42,7 +42,7 @@ app.put('/api/movies/:id',(req,res)=>{
 
 app.post('/api/movies',(req,res)=>{
     db.addNewMovie(req.body).then((data)=>{
-        res.status(200).json(data);
+        res.status(201).json(data);
     }).catch((err)=>{
         res.status(500).send(err);
     })
