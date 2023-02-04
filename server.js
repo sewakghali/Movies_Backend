@@ -7,6 +7,7 @@ const MoviesDB = require("./modules/moviesDB.js");
 const db = new MoviesDB();
 const cors = require('cors');
 app.use(express.json());
+app.use(cors());
 
 app.get('/',(req,res)=>{
     res.status(200).json({"message": "API Listening"});
